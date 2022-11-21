@@ -25,6 +25,7 @@ namespace GitTest.Controllers
 
         public IActionResult Test()
         {
+            String s = "Ravi";
             return View();
         }
 
