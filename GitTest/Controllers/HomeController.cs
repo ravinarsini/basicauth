@@ -38,6 +38,7 @@ namespace GitTest.Controllers
         public IActionResult Error()
         {
             ErrorViewModel model = new ErrorViewModel();
+            ViewData["Message"] = "Test Message";
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
