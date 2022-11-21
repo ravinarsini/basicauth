@@ -23,12 +23,6 @@ namespace GitTest.Controllers
             return View();
         }
 
-        public IActionResult Test()
-        {
-            String s = "Ravi";
-            return View();
-        }
-
         public ActionResult Create()
         {
             string x = "ravi";
