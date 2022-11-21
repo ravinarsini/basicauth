@@ -23,6 +23,11 @@ namespace GitTest.Controllers
             return View();
         }
 
+        public ActionResult Create()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
