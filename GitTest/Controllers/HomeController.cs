@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace GitTest.Controllers
 {
@@ -31,12 +32,17 @@ namespace GitTest.Controllers
 
         public IActionResult Privacy()
         {
+            string json = JsonConvert.SerializeObject(new ErrorViewModel());
+
+            // hello
+           
             return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
+            var s = "helo";
             ErrorViewModel model = new ErrorViewModel();
             ViewData["Message"] = "Test Message";
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
